@@ -28,9 +28,9 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
   });
 
-app.listen(app.get('port'), () =>{
-    console.log(`🐱 server is running on PORT ${app.get('port')}. 🐱`);
-    v1SwaggerDocs(app,PORT);
-});
+// app.listen(app.get('port'), () =>{
+//     console.log(`🐱 server is running on PORT ${app.get('port')}. 🐱`);
+//     v1SwaggerDocs(app,PORT);
+// });
 
 module.exports = app;
