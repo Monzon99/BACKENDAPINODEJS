@@ -1,12 +1,11 @@
 const express = require('express');
 const app = express();
 
-const port = express.env.PORT || 4000;
+app.get('/', (req, res) => {
+    // Envía el archivo HTML al cliente
+    res.sendFile(__dirname + '/index.html');
+  });
 
-app.listen(port);
-
-app.get("/",(req,res) => {
-    res.send("Todo ok por aqui bb");
+app.listen(process.env.PORT || 3000, () => {
+  console.log('API REST iniciada');
 });
-
-console.log(`listen on port ${port} 🐱‍👓`);
