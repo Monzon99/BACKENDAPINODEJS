@@ -21,8 +21,8 @@ app.use(express.json());
 app.use(cors());
 
 //routes
-// app.use('/api/camion',camionRoutes);
-// app.use('/api/personal',personalRoutes);
+app.use('/api/camion',camionRoutes);
+app.use('/api/personal',personalRoutes);
 app.get('/', (req, res) => {
     // Envía el archivo HTML de bienvenida al cliente
     res.sendFile(__dirname + '/index.html');
